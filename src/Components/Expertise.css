@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+.Expertise{
+    width: 100vw;
+    height: 110vh;
+    display: flex;
+    margin-top: 3rem;
+    flex-direction: column;
+    background-color: #fff9f7;
+    align-items: center;
+}
+.heading{
+    font-weight: 550;
+    font-family: "Poppins";
+    font-size: 2.4rem;
+}
+.subheading{
+    font-size: 1.2rem;
+    margin-top: -1.6rem;
+    line-height: 1.6;
+    white-space: pre-line;
+    width: 45rem;
+    word-spacing: 3px;
+    font-weight: normal;
+    color: rgba(15, 15, 15, 0.639);
+    text-align: center;
+    font-family: "Poppins";
+
+}
+.cardsec{
+    display: flex;
+    width: 90vw;
+    height: 67vh;
+    justify-content: space-around;
+    align-items: center;
+}
+.card1{
+    
+    width: 27.5vw;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 63vh;
+}
+.card2{
+    height: 63vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    width: 27.5vw;
+    
+}
+.card3{
+    height: 63vh;
+    width: 27.5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    justify-content: center;
+    
+}
+
+.cardsec img{
+    margin-top: 2.5rem;
+    width: 4.5rem;
+    height:4.5rem;
+    filter: invert(53%) sepia(93%) saturate(3193%) hue-rotate(348deg) brightness(122%) contrast(88%);
+}
+.cardsec h3{
+    font-family: "Poppins";
+    font-size: 1.4rem;
+    font-weight: 500;
+    
+}  
+.cardsec h5{
+    line-height: 1.2;
+    word-spacing: 5px;
+    color:grey;
+    margin-top: -0.7rem;
+    text-align: center;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: normal;
+} 
+.cardsec h6{
+    margin-top: 0;
+    font-size: smaller;
+    font-weight: normal;
+    color: black;
+    color:#f67118;
+}
+.cardsec h6:hover{
+    cursor: pointer;
+}
+.cardsec:hover{
+    cursor: pointer;
+}
+.card1,.card2,.card3{
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.10); /* light shadow */
+    transition: all 0.3s ease-in-out;
+    border: none;
+    transform: scale(1);
+}
+.card1:hover, .card2:hover, .card3:hover {
+    transform: scale(1.07);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+   
+}

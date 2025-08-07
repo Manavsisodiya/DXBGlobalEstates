@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.ProjectSlider {
+  width: 100vw;
+  height: 155vh;
+  margin-top: 3rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.projecthead {
+  font-family: "Poppins";
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.projectsubhead {
+  font-family: "Poppins";
+  font-weight: normal;
+  font-size: 1.2rem;
+  word-spacing: 3px;
+  width: 75vw;
+  margin: 0 auto 1rem auto;
+  color: rgba(62, 60, 60, 0.806);
+  line-height: 1.5;
+  text-align: center;
+}
+
+.carousel {
+  width: 93vw;
+  margin-left: 0.3rem;
+  height: 110vh;
+  position: relative;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 2rem;
+}
+
+.slide.active {
+  opacity: 1;
+  z-index: 2;
+}
+
+.slide-content {
+  background:transparent;
+  padding: 1.5rem;
+  border-radius: 8px;
+  color: white;
+  max-width: 400px;
+}
+
+.slide-title {
+  font-size: 1.8rem;
+  font-family: "Poppins";
+  margin-bottom: 0.5rem;
+}
+
+.slide-desc {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.know-more {
+  padding: 10px 20px;
+  font-family: "Poppins";
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.know-more:hover {
+  background-color: white;
+  color: black;
+}
+
+.dots {
+  position: absolute;
+  bottom: -30px;
+  left: 53%;
+  transform: translateX(-50%);
+  z-index: 10; /* ⬅️ ensure dots are above background */
+  display: flex;
+  gap: 10px;
+}
+
+.dot {
+  height: 12px;
+  width: 12px;
+  background-color: white;
+  border-radius: 50%;
+  opacity: 0.6;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dot.active {
+  opacity: 1;
+  background-color: #f07c2e;
+}
