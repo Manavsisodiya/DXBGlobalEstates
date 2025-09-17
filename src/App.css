@@ -1,20 +1,91 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* prevent horizontal white space */
+}
+
 .container {
   position: relative;
-  height: 100vh;
+  min-height: 100vh; /* allow growth if content is taller */
+  width: 100vw;
   overflow: hidden;
   z-index: 0;
 }
 
-/* Darkened background layer */
-.container::before {
-  content: "";
+/* Background Video Styles */
+.background-video {
   position: absolute;
   top: 0;
   left: 0;
-  height: 100%;
   width: 100%;
-  background: url('./images/bg5.jpeg') no-repeat ;
-  background-size: cover;
-  filter: brightness(0.6); /* darken image only */
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+/* Darkened overlay layer (replaces the filter on the image) */
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Adjust opacity as needed */
   z-index: -1;
 }
+
+/* ===== Responsive Adjustments ===== */
+
+/* Large screens */
+@media (min-width: 1200px) {
+  .background-video {
+    object-position: center top;
+  }
+}
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .background-video {
+    object-position: center center;
+  }
+}
+
+/* Mobile Landscape */
+@media (max-width: 768px) {
+  .container {
+    min-height: 600px;
+  }
+  
+  .background-video {
+    object-position: center center;
+    /* Ensure video covers the entire area on mobile */
+    min-width: 100%;
+    min-height: 100%;
+  }
+}
+
+/* Mobile Portrait (very small) */
+@media (max-width: 480px) {
+  .container {
+    min-height: 600px;
+  }
+  
+  .background-video {
+    object-position: center center;
+    /* For very small screens, prioritize covering the area */
+    width: 100%;
+    height: 100%;
+    min-width: 100%;
+    min-height: 100%;
+  }
+}
+
+html, body {
+  overflow-y: auto;   /* ✅ force vertical scrollbar */
+  overflow-x: hidden;   /* prevent horizontal overflow */
+}
+

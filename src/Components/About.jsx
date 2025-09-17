@@ -1,14 +1,14 @@
 import './About.css';
-import about from '../images/about.jpg'
+import about from '../images/about1.jpg'
 function About() {
     return (
-        <div className='about'>
+        <div className='about' id='about'>
             <div className='imgdiv'>
                 <img alt='about' src={about}/>
             </div>
             <div className='textdiv'>
-                <h2>About <span style={{color:"#f07c2e",fontWeight:'550'}}>DXB Global Estates</span></h2>
-                <h3>At DXB Global Estates, we bring over 20 years of expertise in the dynamic real estate
+                <h2 className='abouth2'>About <span style={{color:"#f07c2e",fontWeight:'550'}}>DXB Global Estates</span></h2>
+                <h3 className='abouth3'>At DXB Global Estates, we bring over 20 years of expertise in the dynamic real estate
                     market of Dubai. As a proud part of the Skynet Group of Companies, we have built a strong
                     reputation for excellence, integrity, and innovation in property buying, selling, and
                     development. <br/><br/>
@@ -24,7 +24,7 @@ function About() {
                     stage. Whether you're an investor, a buyer, or a development partner, DXB Global Estates
                     offers unmatched experience, insight, and dedication to delivering long-term value.
                     </h3>
-                    <button className='btnteam'>Meet Our Team</button>
+                    
             </div>
         </div>
     );

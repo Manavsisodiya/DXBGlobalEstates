@@ -1,0 +1,334 @@
+/* Popup overlay */
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3000;
+  overflow: hidden;
+}
+
+/* Popup container */
+.popup-container {
+  background: #fff;
+  border-radius: 8px;
+  padding: 25px 30px;
+  width: 100%;
+  max-width: 450px;
+  max-height: 95vh;
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  overflow-y: auto;
+}
+
+/* Hide scrollbar but keep functionality */
+.popup-container::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+
+.popup-container {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Close button */
+.popup-close-btn {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-size: 28px;
+  font-weight: 300;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: #999;
+  line-height: 1;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup-close-btn:hover {
+  color: #666;
+}
+
+/* Title */
+.popuptitle {
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  margin-top: 5px;
+  color: #333;
+  letter-spacing: 0.5px;
+}
+
+
+/* Required text */
+.popup-required-text {
+  text-align: center;
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 25px;
+  font-style: italic;
+}
+
+/* Form groups */
+.form-group {
+  margin-bottom: 18px;
+}
+
+/* Inputs */
+.form-input,
+.form-select {
+  width: 100%;
+  padding: 10px 10px;
+  font-size: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.form-input:focus,
+.form-select:focus {
+  border-color: #4fc3f7;
+  box-shadow: 0 0 0 2px rgba(79, 195, 247, 0.1);
+}
+
+.form-select {
+  background: white;
+  cursor: pointer;
+}
+
+/* Phone container */
+.phone-container {
+  display: flex;
+  gap: 10px;
+}
+
+.country-select {
+  min-width: 90px;
+  max-width: 90px;
+  padding: 10px 8px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 10px;
+  background: white;
+  cursor: pointer;
+}
+
+.phone-input {
+  flex: 1;
+  padding: 10px 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 10px;
+}
+
+/* Radio groups */
+.radio-group {
+  margin-bottom: 18px;
+}
+
+.radio-label {
+  font-size: 10px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 12px;
+  margin-top: 0;
+}
+
+.radio-options {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.radio-option {
+  display: flex;
+  align-items: center;
+  font-size: 10px;
+  cursor: pointer;
+  color: #555;
+  white-space: nowrap;
+}
+
+.radio-option input[type="radio"] {
+  margin-right: 8px;
+  margin-top: 0;
+  cursor: pointer;
+}
+
+/* Checkbox containers */
+.checkbox-container {
+  margin-bottom: 5px;
+}
+
+.checkbox-label {
+  font-size: 10px;
+  display: flex;
+  align-items: flex-start;
+  cursor: pointer;
+  color: #555;
+  line-height: 1.5;
+  gap: 8px;
+}
+
+.checkbox-input {
+  margin-top: 2px;
+
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.checkbox-text {
+  flex: 1;
+  margin-top: 1px;
+  font-size: 10px;
+}
+
+.privacy-link {
+  color: #007bff;
+  text-decoration: underline;
+}
+
+.privacy-link:hover {
+  color: #0056b3;
+}
+
+/* Submit button */
+.submit-btn {
+  width: 100%;
+  padding: 14px;
+  background: #4fc3f7;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  margin-top: 10px;
+}
+
+.submit-btn:hover {
+  background: #29b6f6;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(79, 195, 247, 0.3);
+}
+
+/* Mobile styles */
+@media (max-width: 780px) {
+  .popup-overlay {
+    padding: 5px;
+    align-items: flex-start;
+    padding-top: 20px;
+  }
+  
+  .popup-container {
+    max-width: 95%;
+    max-height: calc(100vh - 40px);
+    border-radius: 8px;
+    padding: 20px 16px;
+    margin: 0;
+  }
+  
+  .popup-close-btn {
+    top: 8px;
+    right: 10px;
+    font-size: 22px;
+    width: 28px;
+    height: 28px;
+  }
+  
+  .popuptitle {
+    font-size: 1.1rem;
+    margin-bottom: 14px;
+    margin-top: 2px;
+  }
+  
+  .popup-banner {
+    font-size: 11px;
+    padding: 8px 12px;
+    margin-bottom: 14px;
+  }
+  
+  .popup-required-text {
+    font-size: 10px;
+    margin-bottom: 16px;
+  }
+  
+  .form-group {
+    margin-bottom: 12px;
+  }
+  
+  .form-input,
+  .form-select {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+  
+  .country-select {
+    min-width: 80px;
+    max-width: 80px;
+    padding: 10px 6px;
+    font-size: 12px;
+  }
+  
+  .phone-input {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+  
+  .phone-container {
+    gap: 8px;
+  }
+  
+  .radio-label {
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+  
+  .radio-options {
+    gap: 15px;
+  }
+  
+  .radio-option {
+    font-size: 12px;
+  }
+  
+  .radio-option input[type="radio"] {
+    margin-right: 6px;
+    transform: scale(1.1);
+  }
+  
+  .checkbox-label {
+    font-size: 12px;
+  }
+  
+  .checkbox-text {
+    font-size: 12px;
+  }
+  
+  .checkbox-container {
+    margin-bottom: 10px;
+  }
+  
+  .checkbox-input {
+    transform: scale(1.1);
+  }
+  
+  .submit-btn {
+    padding: 12px;
+    font-size: 14px;
+    margin-top: 6px;
+  }
+}

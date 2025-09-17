@@ -1,59 +1,268 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-.about{
-    width: 78vw;
-    height: 93vh;
-    margin-left: 8rem;
-    margin-top: 5.5rem;
+/* ===== About Container ===== */
+.about {
+    max-width: 1200px;
+    margin: 3rem auto 0 auto;
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 0 2rem;
+    box-sizing: border-box;
+    overflow-x: hidden;
 }
-.imgdiv{
-    width:35vw;
-    height: 80vh;
-    
+
+/* ===== Image Section ===== */
+.imgdiv {
+    flex: 1;
+    max-width: 100%;
+    box-sizing: border-box;
 }
-.imgdiv img{
-    width: 35vw;
-    height: 100%;
+
+.imgdiv img {
+    width: 100%;
+    height: 90vh;
+    margin-left: 0rem;
+    object-position: -10rem center;
+    object-fit: cover;
+    display: block;
 }
-.textdiv{
-    width: 40vw;
-    height: 93vh;
-    
-   
+
+/* ===== Text Section ===== */
+.textdiv {
+    flex: 1;
+    max-width: 50%;
+    margin-top: -2rem;
+    box-sizing: border-box;
 }
-.textdiv h3{
-    margin-top: -1rem;
-    font-family: "Poppins";
-    font-size: 0.8rem;
+
+.abouth2 {
+    font-size: clamp(1rem, 2.5vw, 2.2rem);
+    font-weight: 450;
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 1rem;
+}
+
+.abouth3 {
+    font-size: clamp(0.8rem, 1.6vw, 1rem) !important;
+    font-family: "Poppins", sans-serif;
     white-space: pre-line;
     line-height: 1.8;
     color: grey;
+    text-align: justify !important;
     font-weight: normal;
+    margin-bottom: 2rem;
 }
-.textdiv h2{
-    margin-top: 0;
-    font-size: 2.2rem;
-    font-weight: 450;
-    font-family: "Poppins";
 
-}
-.btnteam{
-    width: 10rem;
-    height: 3rem;
-    padding: 10px;
+/* ===== Button ===== */
+.btnteam {
+    padding: 0.7rem 1.5rem;
     color: white;
-    font-family: "Poppins";
+    font-family: "Poppins", sans-serif;
     background: #f07c2e;
-    font-size: 1rem;
+    font-size: clamp(0.85rem, 1vw, 1rem);
     border: none;
     font-weight: 500;
     cursor: pointer;
     transition: all ease 0.3s;
 }
-.btnteam:hover{
+
+.btnteam:hover {
     background: transparent;
     color: black;
     border: 0.5px solid black;
+}
+
+@media (min-width: 1024px) {
+    .about {
+        flex-direction: row;
+        align-items: center;
+        text-align: center;
+    }    
+    .imgdiv, .textdiv {
+        max-width: 100%;
+    }        
+    .imgdiv{
+        margin-left: -1rem;
+    }    
+    .abouth2 {
+        margin-top: 1.5rem;
+        text-align: left;   
+    }    
+    .abouth3{
+        text-align: left;
+        font-size: 1.2rem;
+    }    
+    .btnteam {
+        margin-top: 1rem;
+        margin-left: -26.5rem;
+    }    
+    .textdiv{
+        margin-top: 1rem;
+    }    
+    .imgdiv img{
+        width: 95%;
+        height: 600px;
+    }    
+}    
+
+@media (max-width: 1024px) {
+    .about {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0 1rem;
+        overflow-x: hidden;
+    }
+    
+    .imgdiv, .textdiv {
+        max-width: 100%;
+        width: 100%;
+        margin-left: 0;
+        box-sizing: border-box;
+    }
+    
+    .imgdiv {
+        margin-bottom: 1rem;
+    }
+    
+    .abouth2 {
+        margin-top: 1.5rem;
+        font-size: 1.7rem;
+    }
+    
+    .abouth3 {
+        font-size: 1rem;
+    }
+    
+    .btnteam {
+        margin-top: 1rem;
+    }
+    
+    .imgdiv img {
+        width: 100%;
+        height: auto;
+        margin-left: 0;
+        object-position: center;
+    }
+}
+
+/* ===== Tablets ===== */
+@media (max-width: 768px) {
+    .about {
+        padding: 0 1rem;
+    }
+    
+    .imgdiv, .textdiv {
+        max-width: 100%;
+        width: 100%;
+        margin-left: 0;
+    }
+    
+    .abouth3 {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+    
+    .abouth2 {
+        font-weight: 500 !important;
+    }
+    
+    .btnteam {
+        width: auto;
+        padding: 0.6rem 1.2rem;
+    }
+    
+    .imgdiv img {
+        width: 100%;
+        height: auto;
+        margin-left: 0;
+        object-position: center;
+    }
+}
+
+/* ===== Mobile Phones ===== */
+@media (max-width: 480px) {
+    .about {
+        margin-top: 3rem;
+        padding: 0 0.8rem;
+    }
+    
+    .imgdiv, .textdiv {
+        max-width: 100%;
+        width: 100%;
+        margin-left: 0;
+    }
+    
+    .abouth2 {
+        font-size: 1.3rem;
+        font-weight: 500 !important;
+    }
+    
+    .imgdiv img {
+        width: 100%;
+        margin-left: 0;
+        object-position: center;
+    }
+    
+    .abouth3 {
+        font-size: 0.8rem !important;
+    }
+    
+    .btnteam {
+        width: 100%;
+        font-size: 0.85rem;
+    }
+}
+
+/* Prevent horizontal overflow on all screen sizes */
+html, body {
+    overflow-x: hidden;
+}
+
+/* Additional fix for container width issues */
+@media (max-width: 1024px) {
+    * {
+        box-sizing: border-box;
+    }
+    
+    .about * {
+        max-width: 100%;
+    }
+}
+
+
+/* Fix for About.css - Desktop Media Query */
+@media (min-width: 1024px) {
+    .about {
+        flex-direction: row;
+        align-items: center;
+        text-align: center;
+    }    
+    .imgdiv, .textdiv {
+        max-width: 100%;
+    }        
+    .imgdiv{
+        margin-left: -1rem;
+    }    
+    .abouth2 {
+        margin-top: 1.5rem;
+        text-align: left;   
+    }    
+    .abouth3{
+        text-align: left;
+        font-size: 1rem !important; /* Changed from 1.2rem to 1rem to match WhyUs section */
+    }    
+    .btnteam {
+        margin-top: 1rem;
+        margin-left: -26.5rem;
+    }    
+    .textdiv{
+        margin-top: 1rem;
+    }    
+    .imgdiv img{
+        width: 95%;
+        height: 600px;
+    }    
 }

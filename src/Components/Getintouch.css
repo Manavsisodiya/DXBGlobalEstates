@@ -1,0 +1,673 @@
+/* Getintouch.css - Fully Responsive for All Devices */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Root Variables for Consistent Sizing */
+:root {
+    --primary-color: #f07c2e;
+    --text-dark: #333;
+    --text-medium: #666;
+    --text-light: #999;
+    --border-color: #ddd;
+    --bg-transparent: rgba(128, 128, 128, 0.226);
+    
+    /* Responsive Font Sizes */
+    --h2-size: clamp(1.5rem, 4vw, 2.2rem);
+    --h3-size: clamp(0.9rem, 2.5vw, 1rem);
+    --body-size: clamp(0.85rem, 2vw, 0.95rem);
+    --label-size: clamp(0.9rem, 2.2vw, 1rem);
+    --button-size: clamp(0.9rem, 2vw, 1rem);
+    
+    /* Container Constraints */
+    --max-section-width: 500px;
+    --container-max-width: 1200px;
+}
+
+/* Main Container */
+.Getintouch {
+    width: 100%;
+    max-width: var(--container-max-width);
+    min-height: auto;
+    margin: 4rem auto 0;
+    display: flex;
+    padding: 2rem 1rem;
+    box-sizing: border-box;
+    gap: 2rem;
+    justify-content: center;
+    align-items: flex-start;
+    overflow-x: hidden;
+}
+
+/* Left Section - Contact Info */
+.touchsec {
+    flex: 1;
+    max-width: var(--max-section-width);
+    min-width: 280px;
+    padding: 0 1rem;
+    box-sizing: border-box;
+}
+
+.touchsec h2 {
+    font-size: var(--h2-size);
+    font-weight: 500;
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+    line-height: 1.3;
+}
+
+.touchsec h3 {
+    font-size: var(--h3-size);
+    color: var(--text-medium);
+    line-height: 1.6;
+    font-weight: 400;
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 2rem;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.logotxtmix {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    box-sizing: border-box;
+}
+
+.logotxtmix img {
+    width: 1.5rem;
+    height: 1.5rem;
+    filter: invert(53%) sepia(93%) saturate(3193%) hue-rotate(348deg) brightness(122%) contrast(88%);
+    flex-shrink: 0;
+    margin-top: 0.25rem;
+}
+
+.logotxtmix h5 {
+    font-weight: 400;
+    color: var(--text-medium);
+    font-size: var(--body-size);
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    line-height: 1.5;
+    word-wrap: break-word;
+}
+
+/* Divider Line */
+.linediv {
+    width: 1px;
+    background-color: var(--bg-transparent);
+    margin: 2rem 0;
+    flex-shrink: 0;
+    align-self: stretch;
+    min-height: 100px;
+}
+
+/* Right Section - Form */
+.formsec {
+    flex: 1;
+    max-width: var(--max-section-width);
+    min-width: 280px;
+    padding: 0 1rem;
+    box-sizing: border-box;
+}
+
+.formsec h2 {
+    font-size: var(--h2-size);
+    font-weight: 500;
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+    line-height: 1.3;
+}
+
+.formsec h3 {
+    font-size: var(--h3-size);
+    font-weight: 400;
+    font-family: "Poppins", sans-serif;
+    color: var(--text-medium);
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+/* Form Styles */
+form {
+    width: 100%;
+    max-width: 100%;
+}
+
+.formrow {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.formgroup {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+    flex: 1;
+    min-width: 0; /* Prevents flex items from overflowing */
+}
+
+.formgroup label {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    font-family: "Poppins", sans-serif;
+    font-size: var(--label-size);
+    color: var(--text-dark);
+}
+
+input,
+select,
+textarea {
+    border: none;
+    border-bottom: 2px solid var(--border-color);
+    padding: 0.75rem 0;
+    font-size: var(--body-size);
+    font-weight: 400;
+    font-family: "Poppins", sans-serif;
+    background: transparent;
+    outline: none;
+    transition: border-bottom-color 0.3s ease;
+    color: var(--text-dark);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-bottom-color: var(--primary-color);
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: var(--text-light);
+    opacity: 1;
+}
+
+select {
+    cursor: pointer;
+    color: var(--text-dark);
+}
+
+select option {
+    background: white;
+    color: var(--text-dark);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.checkboxgroup {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: "Poppins", sans-serif;
+    font-size: var(--body-size);
+    cursor: pointer;
+    font-weight: 400;
+}
+
+.checkbox-label input[type="checkbox"] {
+    width: 1.1rem;
+    height: 1.1rem;
+    margin: 0;
+    cursor: pointer;
+    accent-color: var(--primary-color);
+}
+
+.submitbtn {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.875rem 2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: "Poppins", sans-serif;
+    font-size: var(--button-size);
+    border-radius: 4px;
+    margin-top: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    min-width: 140px;
+}
+
+.submitbtn:hover {
+    background: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(240, 124, 46, 0.2);
+}
+
+.submitbtn:active {
+    transform: translateY(0);
+}
+
+/* Phone Input Styling */
+.phone-input-group {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+}
+
+.country-code-select {
+    flex: 0 0 auto;
+    min-width: 150px;
+    max-width: 200px;
+    padding: 10px 12px;
+    border: 2px solid var(--border-color);
+    border-radius: 5px;
+    background-color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: var(--body-size);
+    color: var(--text-dark);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.country-code-select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(240, 124, 46, 0.3);
+}
+
+.phone-number-input {
+    flex: 1;
+    padding: 10px 12px;
+    border: 2px solid var(--border-color);
+    border-radius: 5px;
+    background-color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: var(--body-size);
+    color: var(--text-dark);
+    transition: all 0.3s ease;
+}
+
+.phone-number-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(240, 124, 46, 0.3);
+}
+
+.phone-number-input::placeholder {
+    color: var(--text-light);
+    font-style: italic;
+}
+
+/* Desktop Site Mode on Mobile - CRITICAL FIX */
+@media screen and (max-width: 767px) {
+    /* Force side-by-side layout for desktop site mode */
+    .Getintouch {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        min-width: 100vw !important;
+        max-width: 100vw !important;
+        width: 100vw !important;
+        padding: 1rem 0.5rem !important;
+        gap: 1rem !important;
+        margin-top: 2rem !important;
+        overflow-x: auto !important;
+        box-sizing: border-box !important;
+    }
+    
+    .touchsec,
+    .formsec {
+        flex: 1 1 45% !important;
+        min-width: 45% !important;
+        max-width: 48% !important;
+        padding: 0 0.5rem !important;
+        box-sizing: border-box !important;
+    }
+    
+    .linediv {
+        width: 1px !important;
+        height: auto !important;
+        min-height: 300px !important;
+        margin: 0 !important;
+        flex-shrink: 0 !important;
+        align-self: stretch !important;
+    }
+    
+    /* Adjust font sizes for compact layout */
+    .touchsec h2,
+    .formsec h2 {
+        font-size: 1.2rem !important;
+        margin-bottom: 0.8rem !important;
+    }
+    
+    .touchsec h3,
+    .formsec h3 {
+        font-size: 0.85rem !important;
+        margin-bottom: 1.2rem !important;
+    }
+    
+    .logotxtmix h5 {
+        font-size: 0.8rem !important;
+        line-height: 1.4 !important;
+    }
+    
+    .logotxtmix img {
+        width: 1.2rem !important;
+        height: 1.2rem !important;
+    }
+    
+    .contact-info {
+        gap: 1rem !important;
+    }
+    
+    /* Form adjustments for desktop site mode */
+    .formrow {
+        flex-direction: column !important;
+        gap: 0 !important;
+        margin-bottom: 0.8rem !important;
+    }
+    
+    .formgroup {
+        margin-bottom: 1rem !important;
+    }
+    
+    .formgroup label {
+        font-size: 0.8rem !important;
+        margin-bottom: 0.3rem !important;
+    }
+    
+    input,
+    select,
+    textarea {
+        padding: 0.5rem 0 !important;
+        font-size: 0.8rem !important;
+    }
+    
+    .phone-input-group {
+        flex-direction: column !important;
+        gap: 0.5rem !important;
+    }
+    
+    .country-code-select,
+    .phone-number-input {
+        width: 100% !important;
+        min-width: 100% !important;
+        max-width: 100% !important;
+        font-size: 0.75rem !important;
+        padding: 0.5rem !important;
+    }
+    
+    .checkboxgroup {
+        flex-direction: column !important;
+        gap: 0.5rem !important;
+    }
+    
+    .checkbox-label {
+        font-size: 0.75rem !important;
+    }
+    
+    .submitbtn {
+        width: 100% !important;
+        padding: 0.7rem !important;
+        font-size: 0.75rem !important;
+        margin-top: 0.8rem !important;
+    }
+}
+
+/* Extra small devices force side-by-side */
+@media screen and (max-width: 480px) {
+    .Getintouch {
+        min-width: 100vw !important;
+        padding: 0.8rem 0.3rem !important;
+        gap: 0.5rem !important;
+    }
+    
+    .touchsec,
+    .formsec {
+        flex: 1 1 48% !important;
+        min-width: 48% !important;
+        max-width: 49% !important;
+        padding: 0 0.2rem !important;
+    }
+    
+    .touchsec h2,
+    .formsec h2 {
+        font-size: 1rem !important;
+        margin-bottom: 0.5rem !important;
+    }
+    
+    .touchsec h3,
+    .formsec h3 {
+        font-size: 0.75rem !important;
+        margin-bottom: 0.8rem !important;
+    }
+    
+    .logotxtmix h5 {
+        font-size: 0.7rem !important;
+    }
+    
+    .formgroup label {
+        font-size: 0.7rem !important;
+    }
+    
+    input,
+    select,
+    textarea {
+        font-size: 0.7rem !important;
+        padding: 0.4rem 0 !important;
+    }
+    
+    .country-code-select,
+    .phone-number-input {
+        font-size: 0.65rem !important;
+        padding: 0.4rem !important;
+    }
+    
+    .checkbox-label {
+        font-size: 0.65rem !important;
+    }
+    
+    .submitbtn {
+        font-size: 0.65rem !important;
+        padding: 0.6rem !important;
+    }
+}
+
+/* Responsive Design for Normal Mobile View */
+
+/* Large Desktop (1400px+) */
+@media (min-width: 1400px) {
+    .Getintouch {
+        max-width: 1400px;
+        padding: 3rem 2rem;
+        gap: 4rem;
+    }
+    
+    .touchsec,
+    .formsec {
+        max-width: 600px;
+        padding: 0 2rem;
+    }
+}
+
+/* Desktop Large (1200px - 1399px) */
+@media (min-width: 1200px) and (max-width: 1399px) {
+    .Getintouch {
+        max-width: 1200px;
+        padding: 2.5rem 2rem;
+        gap: 3rem;
+    }
+}
+
+/* Desktop Medium (992px - 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .Getintouch {
+        max-width: 1000px;
+        padding: 2rem 1.5rem;
+        gap: 2.5rem;
+    }
+    
+    .touchsec,
+    .formsec {
+        max-width: 450px;
+    }
+}
+
+/* Tablet Large (768px - 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .Getintouch {
+        max-width: 100%;
+        margin-top: 3rem;
+        padding: 2rem 1rem;
+        gap: 2rem;
+    }
+    
+    .touchsec,
+    .formsec {
+        max-width: 400px;
+        padding: 0 1rem;
+    }
+    
+    .formrow {
+        gap: 0.75rem;
+    }
+    
+    .country-code-select {
+        min-width: 120px;
+        max-width: 150px;
+        font-size: 0.85rem;
+    }
+}
+
+/* Mobile Responsive Mode (when NOT in desktop site mode) */
+@media screen and (max-width: 767px) and (orientation: portrait) {
+    /* This targets actual mobile responsive mode */
+    html:not([data-desktop-mode]) .Getintouch,
+    .mobile-responsive .Getintouch {
+        flex-direction: column !important;
+        margin-top: 2rem;
+        padding: 1.5rem 1rem;
+        gap: 2rem;
+        max-width: 600px;
+        width: 100% !important;
+        min-width: auto !important;
+    }
+    
+    html:not([data-desktop-mode]) .touchsec,
+    html:not([data-desktop-mode]) .formsec,
+    .mobile-responsive .touchsec,
+    .mobile-responsive .formsec {
+        max-width: 100% !important;
+        min-width: auto !important;
+        padding: 0;
+        flex: none !important;
+    }
+    
+    html:not([data-desktop-mode]) .linediv,
+    .mobile-responsive .linediv {
+        width: 100% !important;
+        height: 1px !important;
+        margin: 1.5rem 0 !important;
+        min-height: auto !important;
+    }
+    
+    html:not([data-desktop-mode]) .formrow,
+    .mobile-responsive .formrow {
+        flex-direction: column;
+        gap: 0;
+        margin-bottom: 0;
+    }
+    
+    html:not([data-desktop-mode]) .phone-input-group,
+    .mobile-responsive .phone-input-group {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    html:not([data-desktop-mode]) .country-code-select,
+    .mobile-responsive .country-code-select {
+        min-width: 100%;
+        max-width: 100%;
+    }
+    
+    html:not([data-desktop-mode]) .submitbtn,
+    .mobile-responsive .submitbtn {
+        width: 100%;
+        padding: 1rem;
+    }
+}
+
+/* Landscape orientation adjustments for mobile */
+@media screen and (max-width: 767px) and (orientation: landscape) {
+    .Getintouch {
+        margin-top: 1rem !important;
+        padding: 1rem 0.5rem !important;
+    }
+    
+    .touchsec h2,
+    .formsec h2 {
+        font-size: 1.1rem !important;
+        margin-bottom: 0.5rem !important;
+    }
+    
+    .touchsec h3,
+    .formsec h3 {
+        font-size: 0.8rem !important;
+        margin-bottom: 0.8rem !important;
+    }
+}
+
+/* High DPI Display Support */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .logotxtmix img {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .Getintouch {
+        max-width: none;
+        margin: 0;
+        padding: 1rem;
+        gap: 1rem;
+        flex-direction: column;
+    }
+    
+    .submitbtn {
+        display: none;
+    }
+    
+    input,
+    select,
+    textarea {
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        padding: 0.5rem;
+    }
+}
+
+/* Force horizontal scroll prevention */
+html, body {
+    overflow-x: hidden;
+}
+
+/* Container width management for mobile */
+@media screen and (max-width: 767px) {
+    .Getintouch * {
+        box-sizing: border-box !important;
+    }
+}

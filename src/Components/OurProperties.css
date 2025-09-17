@@ -1,105 +1,435 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-.OurProperties {
-  width: 100vw;
-  height: 180vh;
-  margin-top: 3rem;
-  overflow: hidden;
-  position: relative;
+.our-properties {
+  width: 100%;
+  margin-top: 0rem;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+  background: #fff;
 }
 
-.projecthead1 {
+.project-head2 {
   font-family: "Poppins";
   font-weight: 500;
   text-transform: uppercase;
-  font-size: 2rem;
+  font-size: clamp(1rem, 2.5vw, 2.2rem);
   text-align: center;
+  margin-bottom: 1rem;
+  line-height: 1.2;
 }
 
-.projectsubhead1 {
+.project-subhead2 {
   font-family: "Poppins";
   font-weight: normal;
-  font-size: 1.2rem;
+  font-size: clamp(0.8rem, 1.1vw, 1rem);
   word-spacing: 2px;
-  width: 85vw;
-  margin: 0 auto 1rem auto;
+  max-width: 85rem;
+  width: 100%;
+  margin: 0 auto 2rem auto;
   color: rgba(62, 60, 60, 0.806);
-  line-height: 1.5;
-  text-align: center;
+  line-height: 1.6;
+  text-align: justify;
+  padding: 0 1rem;
+  box-sizing: border-box;
 }
-.pcardsections{
-    
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 130vh;
+
+.properties-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  box-sizing: border-box;
 }
-.cardsrow1{
-    width: 95vw;   
-    height: 57.5vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+
+.properties-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  width: 100%;
 }
-.card{
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.397); /* light shadow */
-    width: 23.5%;
-    height: 100%;
-    border-radius: 10px;
+
+.property-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  
 }
-.cardimg2{
-    width: 100%;
-    height: 10rem;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+
+.property-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
 }
-.card h2{
-    font-size: 1.1rem;
-    font-weight: 520;
-    margin-left: 1rem;
-    font-family: "Poppins";
+
+.property-content {
+  padding: 1.5rem;
+  display: flex;
+  background-color: #f6e9de3b;
+  flex-direction: column;
+  flex-grow: 1;
 }
-.card h3{
-    font-size: 0.9rem;
-    font-weight: normal;
-    font-family:"Poppins";
-    color: grey;
-    margin-top: -0.3rem;
+
+.property-card h2 {
+  font-size: clamp(1rem, 2vw, 1.1rem);
+  font-weight: 520;
+  font-family: "Poppins";
+  margin: 0 0 0.5rem 0;
+  color: #333;
+  line-height: 1.3;
 }
-.cardimg3{
-    margin-left: 0.9rem;
-    width: 1rem;
-    height: 1rem;
+
+.property-card h3 {
+  font-size: clamp(0.8rem, 1.5vw, 0.9rem);
+  font-weight: normal;
+  font-family: "Poppins";
+  color: #666;
+  margin: 0 0 1rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
 }
-.card h4{
-    font-size: large;
-    font-weight: 500;
-    margin-top: -0.2rem;
-    margin-left: 1rem;
-    color: #f07c2e;
-    font-family: "Poppins";
+
+.location-icon {
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
 }
-.card button{
-    width: 100%;
-    height: 8vh;
-    margin-top: -0.3rem;
-    border: none ;
-    font-weight: 500;
-    font-size: medium;
-    cursor: pointer;
-    background-color: #f07c2ee7;
-    color: white;
-    font-family: "Poppins";
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px;
+
+.property-card h3 span {
+  line-height: 1.3;
 }
-.cardsrow2{
-    width: 95vw;   
-    height: 57.5vh;
-    display: flex;
+
+.property-card h4 {
+  font-size: clamp(1rem, 2vw, 1.1rem);
+  font-weight: 500;
+  color: #f07c2e;
+  font-family: "Poppins";
+  margin: 0 0 1.5rem 0;
+  flex-grow: 1;
+}
+
+.enquire-btn {
+  width: 100%;
+  height: 50px;
+  border: none;
+  font-weight: 500;
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
+  cursor: pointer;
+  background-color: #f07c2e;
+  color: white;
+  font-family: "Poppins";
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.enquire-btn:hover {
+  background-color: #e55a00;
+  transform: translateY(-2px);
+}
+
+.enquire-btn:active {
+  transform: translateY(0);
+}
+
+/* Large Desktop */
+@media screen and (min-width: 1200px) {
+  .our-properties {
+    padding: 3rem 2rem;
+  }
+  
+  .properties-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.5rem;
+  }
+  
+  .project-head2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .project-subhead2 {
+    font-size: 1rem;
+    margin-bottom: 3rem;
+  }
+  
+  .property-image {
+    height: 220px;
+  }
+}
+
+/* Desktop */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .our-properties {
+    padding: 2.5rem 1.5rem;
+  }
+  
+  .properties-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+  
+  .property-image {
+    height: 200px;
+  }
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .our-properties {
+    padding: 2rem 1rem;
     margin-top: 1.5rem;
-    justify-content: space-between;
-    align-items: center;
+  }
+  
+  .project-head2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .project-subhead2 {
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+  }
+  
+  .properties-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .property-image {
+    height: 180px;
+  }
+  
+  .property-content {
+    padding: 1.25rem;
+  }
+}
+
+/* Mobile Large */
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  .our-properties {
+    padding: 1.5rem 1rem;
+    margin-top: 1rem;
+  }
+  
+  .project-head2 {
+    margin-bottom: 0.8rem;
+  }
+  
+  .project-subhead2 {
+    margin-bottom: 1.5rem;
+  }
+  
+  .properties-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  
+  .property-image {
+    height: 160px;
+  }
+  
+  .property-content {
+    padding: 1rem;
+  }
+  
+  .enquire-btn {
+    height: 45px;
+  }
+}
+
+/* Mobile */
+@media screen and (min-width: 481px) and (max-width: 575px) {
+  .our-properties {
+    padding: 1rem;
+    margin-top: 0.5rem;
+  }
+  
+  .project-head2 {
+    margin-bottom: 0.8rem;
+  }
+  
+  .project-subhead2 {
+    margin-bottom: 1.5rem;
+  }
+  
+  .properties-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  
+  .property-image {
+    height: 160px;
+  }
+  
+  .property-content {
+    padding: 1rem;
+  }
+  
+  .enquire-btn {
+    height: 45px;
+  }
+}
+
+/* Small Mobile - 2 cards per row like reference image */
+@media screen and (max-width: 480px) {
+  .our-properties {
+    padding: 1rem 0.5rem;
+    margin-top: 0.5rem;
+  }
+  
+  .project-head2 {
+    font-size: 1.3rem !important;
+    margin-bottom: 0.8rem;
+  }
+  
+  .project-subhead2 {
+    font-size: 0.85rem !important;
+    margin-bottom: 1rem !important;
+    padding: 0 0.5rem;
+  }
+  
+  .properties-container {
+    padding: 0 0.5rem;
+  }
+  
+  .properties-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
+  }
+  
+  .property-card {
+    border-radius: 8px;
+  }
+  
+  .property-image {
+    height: 140px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+  
+  .property-content {
+    padding: 0.8rem;
+  }
+  
+  .property-card h2 {
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+  }
+  
+  .property-card h3 {
+    font-size: 0.75rem;
+    margin-bottom: 0.5rem;
+    gap: 0.2rem;
+  }
+  
+  .location-icon {
+    width: 0.8rem;
+    height: 0.8rem;
+  }
+  
+  .property-card h4 {
+    font-size: 0.9rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .enquire-btn {
+    height: 38px;
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+  }
+}
+
+/* Extra Small Mobile */
+@media screen and (max-width: 375px) {
+  .our-properties {
+    padding: 0.8rem 0.3rem;
+  }
+  
+  .properties-container {
+    padding: 0 0.3rem;
+  }
+  
+  .properties-grid {
+    gap: 0.6rem;
+  }
+  
+  .property-image {
+    height: 130px;
+  }
+  
+  .property-content {
+    padding: 0.7rem;
+  }
+  
+  .property-card h2 {
+    font-size: 0.85rem;
+  }
+  
+  .property-card h3 {
+    font-size: 0.7rem;
+  }
+  
+  .property-card h4 {
+    font-size: 0.85rem;
+  }
+  
+  .enquire-btn {
+    height: 36px;
+    font-size: 0.75rem;
+  }
+}
+
+/* Fix for OurProperties.css - Desktop Media Queries */
+
+/* Large Desktop */
+@media screen and (min-width: 1200px) {
+  .our-properties {
+    padding: 3rem 2rem;
+  }
+  
+  .properties-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.5rem;
+  }
+  
+  .project-head2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .project-subhead2 {
+    font-size: 1rem !important; /* Changed to match WhyUs section */
+    margin-bottom: 3rem;
+  }
+  
+  .property-image {
+    height: 220px;
+  }
+}
+
+/* Desktop */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .our-properties {
+    padding: 2.5rem 1.5rem;
+  }
+  
+  .properties-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+  
+  .project-subhead2 {
+    font-size: 1rem !important; /* Changed to match WhyUs section */
+  }
+  
+  .property-image {
+    height: 200px;
+  }
 }
